@@ -1,3 +1,47 @@
 body {
     font-family: 'Muli', sans-serif;
 }
+
+footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+footer p {
+    margin-bottom: .25rem;
+}
+
+.jumbotron {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    background-color: #fff;
+}
+
+.jumbotron p:last-child {
+    margin-bottom: 0;
+}
+
+.jumbotron .container {
+    max-width: 30rem;
+}
+
+.album {
+    border: 1px;
+}
+
+a:hover {
+    text-decoration: none
+}
+
+@font-face {
+    font-family: CODE;
+    src: url(../assets/font/CODE.otf);
+}
+
+@media (min-width: 768px) {
+    .jumbotron {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
