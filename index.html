@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software Engineer Portfolio</title>
+    <link rel="icon" href="assets/img/favicon.webp" type="image/webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2kS1vL7jPj6g8f6W5B/3H8W4h5Vv3iU5e2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -17,11 +19,6 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        'primary-black': '#101010',
-                        'secondary-black': '#1A1A1A',
-                        'text-light': '#F5F5F5',
-                        'accent-gray': '#AAAAAA',
-                        'hover-light': '#555555',
                         'accent-blue': '#3B82F6',
                         'accent-green': '#10B981',
                     }
@@ -30,16 +27,48 @@
         }
     </script>
     <style>
+        :root {
+            /* Dark Theme Variables */
+            --bg-primary: #101010;
+            --bg-secondary: #1A1A1A;
+            --text-color: #F5F5F5;
+            --accent-gray: #AAAAAA;
+            --hover-light: #555555;
+            --accent-blue: #3B82F6;
+            --accent-green: #10B981;
+        }
+
+        .light-mode {
+            /* Light Theme Variables */
+            --bg-primary: #f3f4f6;
+            --bg-secondary: #ffffff;
+            --text-color: #374151;
+            --accent-gray: #6b7280;
+            --hover-light: #e5e7eb;
+            --accent-blue: #2563eb;
+            --accent-green: #059669;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
-            color: #374151;
-        }
-        body.dark-mode {
-            background-color: #101010;
-            color: #F5F5F5;
+            background-color: var(--bg-primary);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         
+        /* Tailwind class mapping using CSS variables */
+        .bg-primary-black { background-color: var(--bg-primary); }
+        .bg-secondary-black { background-color: var(--bg-secondary); }
+        .text-text-light { color: var(--text-color); }
+        .text-accent-gray { color: var(--accent-gray); }
+        .hover\:bg-hover-light:hover { background-color: var(--hover-light); }
+        .hover\:text-accent-gray:hover { color: var(--accent-gray); }
+        .text-accent-blue { color: var(--accent-blue); }
+        .text-accent-green { color: var(--accent-green); }
+        .bg-accent-blue { background-color: var(--accent-blue); }
+        .bg-accent-green { background-color: var(--accent-green); }
+        .text-primary-black { color: var(--bg-primary); }
+
         .section-fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -51,30 +80,66 @@
         }
 
         .hero-background {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('assets/img/hero-bg4.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('assets/img/hero-bg.webp');
             background-size: cover;
             background-position: center;
         }
+
+        .header-hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .header-visible {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        /* New classes for hero section to keep dark mode colors */
+        .hero-title-text {
+            color: #F5F5F5;
+        }
+        .hero-accent-text {
+            color: #10B981;
+        }
+        .hero-gray-text {
+            color: #AAAAAA;
+        }
+        .hero-button {
+            background-color: #3B82F6;
+            color: #101010;
+        }
+
     </style>
 </head>
 <body class="bg-primary-black text-text-light">
 
     <!-- Header & Navigation -->
-    <header class="bg-secondary-black shadow-lg sticky top-0 z-50">
+    <header id="main-header" class="bg-secondary-black shadow-lg sticky top-0 z-50 transition-all duration-300 ease-in-out header-visible">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-text-light hover:text-accent-gray transition-colors">Dimas.dev</a>
-            <div class="hidden md:flex space-x-6 font-semibold">
+            <a href="#home" class="text-2xl font-bold text-text-light hover:text-accent-gray transition-colors">Dafa.dev</a>
+            <div class="hidden md:flex space-x-6 font-semibold items-center">
                 <a href="#about" class="hover:text-accent-gray transition-colors">About</a>
                 <a href="#resume" class="hover:text-accent-gray transition-colors">Resume</a>
                 <a href="#projects" class="hover:text-accent-gray transition-colors">Projects</a>
                 <a href="#contact" class="hover:text-accent-gray transition-colors">Contact</a>
+                <button id="theme-toggle" aria-label="Toggle theme" class="focus:outline-none text-text-light hover:text-accent-gray transition-colors p-2 rounded-full">
+                    <i id="theme-icon" class="fa-solid fa-moon text-xl"></i>
+                </button>
             </div>
             <!-- Mobile Menu Button -->
-            <button id="menu-button" class="md:hidden focus:outline-none text-text-light">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
+            <div class="flex items-center space-x-4 md:hidden">
+                <button id="theme-toggle-mobile" aria-label="Toggle theme" class="focus:outline-none text-text-light hover:text-accent-gray transition-colors p-2 rounded-full">
+                    <i id="theme-icon-mobile" class="fa-solid fa-moon text-xl"></i>
+                </button>
+                <button id="menu-button" class="focus:outline-none text-text-light">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-secondary-black shadow-lg py-2">
@@ -90,15 +155,19 @@
         <!-- Home Section -->
         <section id="home" class="hero-background min-h-screen flex items-center text-center md:text-left section-fade-in px-4">
             <div class="container mx-auto max-w-3xl md:ml-12 p-8 rounded-2xl">
-                <h1 class="text-5xl md:text-6xl font-extrabold text-text-light leading-tight mb-4">
-                    Hello, I'm <span class="text-accent-green">Dimas</span>
+                <h1 class="text-5xl md:text-6xl font-extrabold hero-title-text leading-tight mb-4">
+                    Hello, I'm <span class="hero-accent-text">Dafa Rizky</span>
                 </h1>
-                <p class="text-2xl md:text-3xl font-light text-accent-gray mb-6">
-                    Software Engineer based in Indonesia.
+                <p class="text-2xl md:text-3xl font-light hero-gray-text mb-6">
+                    Software Engineer based in Bandung, Indonesia.
                 </p>
-                <a href="#contact" class="inline-block bg-accent-blue text-primary-black font-bold py-3 px-6 rounded-full shadow-lg hover:bg-accent-blue/80 transition-all transform hover:scale-105">
+                <a href="#contact" class="inline-block hero-button font-bold py-3 px-6 rounded-full shadow-lg hover:bg-accent-green/80 transition-all transform hover:scale-105">
                     Get in Touch
                 </a>
+            </div>
+            <!-- Unsplash Attribution -->
+            <div class="absolute bottom-4 right-4 text-xs text-accent-gray">
+                Photo by <a href="https://unsplash.com/@olenkasergienko?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Olena Bohovyk</a> on <a href="https://unsplash.com/photos/a-person-using-a-laptop-2O3TmN0TtqU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
             </div>
         </section>
 
@@ -106,11 +175,11 @@
         <section id="about" class="container mx-auto px-4 py-16 section-fade-in">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
-                <div class="flex flex-col md:flex-row items-center bg-secondary-black p-8 rounded-2xl shadow-lg border border-accent-gray/20">
-                    <img src="https://placehold.co/150x150/1A1A1A/F5F5F5?text=Profile" alt="Profile Picture" class="w-40 h-40 rounded-full mb-6 md:mb-0 md:mr-8 shadow-md border border-accent-gray/50">
+                <div class="flex flex-col md:flex-row items-center bg-secondary-black p-8 rounded-2xl shadow-lg">
+                    <img src="https://placehold.co/150x150/1A1A1A/F5F5F5?text=Profile" alt="Profile Picture" class="w-40 h-40 rounded-full mb-6 md:mb-0 md:mr-8 shadow-md">
                     <div class="text-center md:text-left">
                         <p class="text-lg leading-relaxed mb-4">
-                            As a software engineer, I am passionate about building robust and efficient applications. My primary expertise lies in the backend, where I actively use <strong>Laravel 12</strong>, <strong>PHP 8.3</strong>, and <strong>PostgreSQL</strong> to develop scalable solutions. I'm based in Indonesia and am always eager to learn and take on new challenges.
+                            As a software engineer based in Bandung, Indonesia, I am passionate about building robust and efficient applications. My primary expertise lies in the backend, where I actively use <strong>Laravel</strong>, <strong>PHP</strong>, and <strong>PostgreSQL</strong> to develop scalable solutions. I am always eager to learn and take on new challenges.
                         </p>
                         <p class="text-lg leading-relaxed mb-4">
                             When I'm not coding, you can find me diving into the world of gaming. My interests lean towards exploration, survival, and hack-and-slash titles, with favorites like <strong>Wuthering Waves</strong> and <strong>Monster Hunter World</strong>. My rig, the <strong>ROG Strix G16 G614PM</strong>, helps me enjoy these experiences to the fullest.
@@ -122,86 +191,145 @@
 
         <!-- Resume Section -->
         <section id="resume" class="container mx-auto px-4 py-16 section-fade-in">
-            <div class="max-w-4xl mx-auto">
+            <div class="max-w-6xl mx-auto">
                 <h2 class="text-4xl font-bold text-center mb-12">Resume</h2>
                 
                 <!-- Education Sub-section -->
-                <div class="bg-secondary-black p-8 rounded-2xl shadow-lg border border-accent-gray/20 mb-12">
+                <div class="bg-secondary-black p-8 rounded-2xl shadow-lg mb-12">
                     <h3 class="text-3xl font-bold mb-6">Education</h3>
                     <div class="flex items-start mb-6">
                         <i class="fa-solid fa-graduation-cap text-2xl text-accent-green mt-1 mr-4"></i>
                         <div>
-                            <h4 class="text-xl font-bold">University of Technology</h4>
-                            <p class="text-accent-gray">2018 - 2022</p>
-                            <p class="text-lg mt-2">Bachelor of Science in Computer Science. Graduated with honors, focusing on software development and database systems.</p>
+                            <h4 class="text-xl font-bold">Universitas Komputer Indonesia</h4>
+                            <p class="text-accent-gray">2019 - 2023</p>
+                            <p class="text-lg mt-2">Bachelor of Informatic Engineering. Graduated with a GPA of 3.58.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
                         <i class="fa-solid fa-graduation-cap text-2xl text-accent-green mt-1 mr-4"></i>
                         <div>
-                            <h4 class="text-xl font-bold">High School of Science</h4>
-                            <p class="text-accent-gray">2015 - 2018</p>
-                            <p class="text-lg mt-2">Focused on advanced mathematics and physics, building a strong foundation for a career in technology.</p>
+                            <h4 class="text-xl font-bold">SMAN 16 Bandung</h4>
+                            <p class="text-accent-gray">2016 - 2019</p>
+                            <p class="text-lg mt-2">Focused on science, building a strong foundation for a career in technology.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Experience Sub-section -->
-                <div class="bg-secondary-black p-8 rounded-2xl shadow-lg border border-accent-gray/20 mb-12">
+                <div class="bg-secondary-black p-8 rounded-2xl shadow-lg mb-12">
                     <h3 class="text-3xl font-bold mb-6">Experience</h3>
                     <div class="flex items-start mb-6">
                         <i class="fa-solid fa-briefcase text-2xl text-accent-blue mt-1 mr-4"></i>
                         <div>
-                            <h4 class="text-xl font-bold">Software Engineer - Tech Solutions Inc.</h4>
-                            <p class="text-accent-gray">2022 - Present</p>
+                            <h4 class="text-xl font-bold">Software Engineer - Wangun Teknologi Bersama</h4>
+                            <p class="text-accent-gray">2024 - Present</p>
                             <ul class="list-disc list-inside text-lg mt-2 space-y-1">
-                                <li>Developed and maintained RESTful APIs using Laravel and PHP 8.3.</li>
+                                <li>Developed and maintained RESTful APIs using Laravel and PHP.</li>
                                 <li>Designed and managed database schemas with PostgreSQL.</li>
                                 <li>Collaborated with front-end developers to integrate new features.</li>
                                 </ul>
                         </div>
                     </div>
-                    <div class="flex items-start">
-                        <i class="fa-solid fa-briefcase text-2xl text-accent-blue mt-1 mr-4"></i>
-                        <div>
-                            <h4 class="text-xl font-bold">Junior Developer - Web Innovations Ltd.</h4>
-                            <p class="text-accent-gray">2020 - 2022</p>
-                            <ul class="list-disc list-inside text-lg mt-2 space-y-1">
-                                <li>Assisted in building and debugging web applications.</li>
-                                <li>Wrote clean, commented code for various projects.</li>
-                                <li>Participated in daily stand-ups and code reviews.</li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Skills Sub-section -->
-                <div class="bg-secondary-black p-8 rounded-2xl shadow-md border border-accent-gray/20">
+                <div class="bg-secondary-black p-8 rounded-2xl shadow-md">
                     <h3 class="text-3xl font-bold text-center mb-6">Skills</h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
-                        <div class="p-6 rounded-2xl shadow-md transform hover:scale-105 transition-transform">
-                            <i class="fab fa-laravel text-4xl text-accent-green mb-4"></i>
-                            <p class="font-semibold text-lg">Laravel</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div>
+                            <h4 class="text-xl font-bold text-accent-green text-center mb-4">Programming Languages</h4>
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-php-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">PHP</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-javascript-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">JavaScript</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-python-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">Python</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="p-6 rounded-2xl shadow-md transform hover:scale-105 transition-transform">
-                            <i class="fab fa-php text-4xl text-accent-green mb-4"></i>
-                            <p class="font-semibold text-lg">PHP 8.3</p>
+                        <div>
+                            <h4 class="text-xl font-bold text-accent-blue text-center mb-4">Frameworks & Libraries</h4>
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-html5-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">HTML5</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-css3-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">CSS3</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-bootstrap-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">Bootstrap</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-livewire-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">Livewire</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-laravel-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">Laravel</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-django-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">Django</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="p-6 rounded-2xl shadow-md transform hover:scale-105 transition-transform">
-                            <i class="fa-solid fa-database text-4xl text-accent-green mb-4"></i>
-                            <p class="font-semibold text-lg">PostgreSQL</p>
-                        </div>
-                        <div class="p-6 rounded-2xl shadow-md transform hover:scale-105 transition-transform">
-                            <i class="fab fa-js-square text-4xl text-accent-blue mb-4"></i>
-                            <p class="font-semibold text-lg">JavaScript</p>
-                        </div>
-                        <div class="p-6 rounded-2xl shadow-md transform hover:scale-105 transition-transform">
-                            <i class="fab fa-vuejs text-4xl text-accent-blue mb-4"></i>
-                            <p class="font-semibold text-lg">Vue.js</p>
-                        </div>
-                        <div class="p-6 rounded-2xl shadow-md transform hover:scale-105 transition-transform">
-                            <i class="fab fa-git-alt text-4xl text-accent-blue mb-4"></i>
-                            <p class="font-semibold text-lg">Git & GitHub</p>
+                        <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                            <h4 class="text-xl font-bold text-accent-green text-center mb-4">Databases & DevOps</h4>
+                            <div class="grid grid-cols-2 gap-4 text-center">
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-postgresql-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">PostgreSQL</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-redis-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">Redis</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-mysql-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">MySQL</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-git-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">Git</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-github-original colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">GitHub</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-gitlab-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">GitLab</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-nginx-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">Nginx</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-apache-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">Apache</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-digitalocean-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">DigitalOcean</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-heroku-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">Heroku</p>
+                                </div>
+                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                    <i class="devicon-googlecloud-plain colored text-3xl mb-2"></i>
+                                    <p class="font-semibold">Google Cloud</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -214,21 +342,21 @@
                 <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Project 1 -->
-                    <div class="bg-secondary-black p-8 rounded-2xl shadow-lg flex flex-col border border-accent-gray/20">
+                    <div class="bg-secondary-black p-8 rounded-2xl shadow-lg flex flex-col">
                         <img src="https://placehold.co/600x400/1A1A1A/F5F5F5?text=Project+1" alt="Project 1" class="rounded-lg mb-6 w-full h-48 object-contain">
                         <h3 class="text-2xl font-bold mb-2">Project Title One</h3>
                         <p class="text-accent-gray mb-4">A brief description of your project. This project was built using Laravel and PostgreSQL, and it solved a key business problem related to data management.</p>
                         <a href="#" class="inline-block bg-accent-green text-primary-black font-bold py-2 px-4 rounded-full text-center hover:bg-accent-green/80 transition-colors mt-auto self-start">View Project</a>
                     </div>
                     <!-- Project 2 -->
-                    <div class="bg-secondary-black p-8 rounded-2xl shadow-lg flex flex-col border border-accent-gray/20">
+                    <div class="bg-secondary-black p-8 rounded-2xl shadow-lg flex flex-col">
                         <img src="https://placehold.co/600x400/1A1A1A/F5F5F5?text=Project+2" alt="Project 2" class="rounded-lg mb-6 w-full h-48 object-contain">
                         <h3 class="text-2xl font-bold mb-2">Project Title Two</h3>
                         <p class="text-accent-gray mb-4">Another project example. This one showcases my skills in building a full-stack web application with PHP 8.3 and a modern frontend framework.</p>
                         <a href="#" class="inline-block bg-accent-blue text-primary-black font-bold py-2 px-4 rounded-full text-center hover:bg-accent-blue/80 transition-colors mt-auto self-start">View Project</a>
                     </div>
                     <!-- Project 3 - Newly Added -->
-                    <div class="bg-secondary-black p-8 rounded-2xl shadow-lg flex flex-col border border-accent-gray/20">
+                    <div class="bg-secondary-black p-8 rounded-2xl shadow-lg flex flex-col">
                         <img src="https://placehold.co/600x400/1A1A1A/F5F5F5?text=Project+3" alt="Project 3" class="rounded-lg mb-6 w-full h-48 object-contain">
                         <h3 class="text-2xl font-bold mb-2">Project Title Three</h3>
                         <p class="text-accent-gray mb-4">A new project to demonstrate the three-column layout. This could be an application showing your proficiency in another stack or a different kind of project.</p>
@@ -242,17 +370,17 @@
         <section id="contact" class="container mx-auto px-4 py-16 section-fade-in">
             <div class="max-w-2xl mx-auto">
                 <h2 class="text-4xl font-bold text-center mb-12">Get In Touch</h2>
-                <div class="bg-secondary-black p-8 rounded-2xl shadow-lg border border-accent-gray/20">
+                <div class="bg-secondary-black p-8 rounded-2xl shadow-lg">
                     <div class="flex flex-col items-center space-y-4">
                         <p class="text-xl text-center mb-4">Connect with me directly:</p>
                         <div class="flex space-x-6">
-                            <a href="mailto:dimas.dev@example.com" class="text-text-light hover:text-accent-blue transition-colors transform hover:scale-110" aria-label="Email">
+                            <a href="mailto:dafarizky34@gmail.com" class="text-text-light hover:text-accent-blue transition-colors transform hover:scale-110" aria-label="Email">
                                 <i class="fa-solid fa-envelope text-4xl"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/dimasdev" target="_blank" class="text-text-light hover:text-accent-blue transition-colors transform hover:scale-110" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/in/dafarizky002/" target="_blank" class="text-text-light hover:text-accent-blue transition-colors transform hover:scale-110" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin-in text-4xl"></i>
                             </a>
-                            <a href="https://github.com/dimasdev" target="_blank" class="text-text-light hover:text-accent-blue transition-colors transform hover:scale-110" aria-label="GitHub">
+                            <a href="https://github.com/dafalagi" target="_blank" class="text-text-light hover:text-accent-blue transition-colors transform hover:scale-110" aria-label="GitHub">
                                 <i class="fab fa-github text-4xl"></i>
                             </a>
                         </div>
@@ -265,7 +393,7 @@
 
     <footer class="bg-secondary-black text-accent-gray py-6 text-center">
         <div class="container mx-auto">
-            <p>&copy; 2025 Dimas. All Rights Reserved.</p>
+            <p>&copy; 2025 Dafa Rizky. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -314,6 +442,66 @@
             sections.forEach(section => {
                 observer.observe(section);
             });
+
+            // Hide/show navbar on scroll
+            let lastScrollY = window.scrollY;
+            const mainHeader = document.getElementById('main-header');
+
+            window.addEventListener('scroll', () => {
+                const currentScrollY = window.scrollY;
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    // Scrolling down
+                    mainHeader.classList.add('header-hidden');
+                    mainHeader.classList.remove('header-visible');
+                } else {
+                    // Scrolling up or at the top
+                    mainHeader.classList.add('header-visible');
+                    mainHeader.classList.remove('header-hidden');
+                }
+                lastScrollY = currentScrollY;
+            });
+            
+            // Theme toggle logic
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+            const themeIcon = document.getElementById('theme-icon');
+            const themeIconMobile = document.getElementById('theme-icon-mobile');
+            
+            // Initial theme setting based on localStorage or OS preference
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                themeIconMobile.classList.remove('fa-moon');
+                themeIconMobile.classList.add('fa-sun');
+            } else {
+                document.body.classList.remove('light-mode');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                themeIconMobile.classList.remove('fa-sun');
+                themeIconMobile.classList.add('fa-moon');
+            }
+
+            function toggleTheme() {
+                document.body.classList.toggle('light-mode');
+                if (document.body.classList.contains('light-mode')) {
+                    localStorage.setItem('theme', 'light');
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                    themeIconMobile.classList.remove('fa-moon');
+                    themeIconMobile.classList.add('fa-sun');
+                } else {
+                    localStorage.setItem('theme', 'dark');
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                    themeIconMobile.classList.remove('fa-sun');
+                    themeIconMobile.classList.add('fa-moon');
+                }
+            }
+            
+            themeToggle.addEventListener('click', toggleTheme);
+            themeToggleMobile.addEventListener('click', toggleTheme);
         });
     </script>
 
