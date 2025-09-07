@@ -124,20 +124,20 @@
     <!-- Header & Navigation -->
     <header id="main-header" class="bg-secondary-black shadow-lg sticky top-0 z-50 transition-all duration-300 ease-in-out header-visible">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-text-light hover:text-accent-gray transition-colors">Dafa.dev</a>
+            <a href="#home" class="text-2xl font-bold text-text-light hover:text-accent-gray transition-colors">dafalagi</a>
             <div class="hidden md:flex space-x-6 font-semibold items-center">
                 <a href="#about" class="hover:text-accent-gray transition-colors">About</a>
                 <a href="#resume" class="hover:text-accent-gray transition-colors">Resume</a>
                 <a href="#projects" class="hover:text-accent-gray transition-colors">Projects</a>
                 <a href="#contact" class="hover:text-accent-gray transition-colors">Contact</a>
                 <button id="theme-toggle" aria-label="Toggle theme" class="focus:outline-none text-text-light hover:text-accent-gray transition-colors p-2 rounded-full">
-                    <i id="theme-icon" class="fa-solid fa-moon text-xl"></i>
+                    <i id="theme-icon" class="fa-solid fa-sun text-xl"></i>
                 </button>
             </div>
             <!-- Mobile Menu Button -->
             <div class="flex items-center space-x-4 md:hidden">
                 <button id="theme-toggle-mobile" aria-label="Toggle theme" class="focus:outline-none text-text-light hover:text-accent-gray transition-colors p-2 rounded-full">
-                    <i id="theme-icon-mobile" class="fa-solid fa-moon text-xl"></i>
+                    <i id="theme-icon-mobile" class="fa-solid fa-sun text-xl"></i>
                 </button>
                 <button id="menu-button" class="focus:outline-none text-text-light">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -181,7 +181,7 @@
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
                 <div class="flex flex-col md:flex-row items-center bg-secondary-black p-8 rounded-2xl shadow-lg">
-                    <img src="https://placehold.co/150x150/1A1A1A/F5F5F5?text=Profile" alt="Profile Picture" class="w-40 h-40 rounded-full mb-6 md:mb-0 md:mr-8 shadow-md">
+                    <img src="assets/img/profile.webp" alt="Profile Picture" class="w-40 h-40 rounded-full mb-6 md:mb-0 md:mr-8 shadow-md">
                     <div class="text-center md:text-left">
                         <p class="text-lg leading-relaxed mb-4">
                             As a software engineer based in Bandung, Indonesia, I am passionate about building robust and efficient applications. My primary expertise lies in the backend, where I actively use <strong>Laravel</strong>, <strong>PHP</strong>, and <strong>PostgreSQL</strong> to develop scalable solutions. I am always eager to learn and take on new challenges.
@@ -474,18 +474,18 @@
             
             // Initial theme setting based on localStorage or OS preference
             const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'light') {
-                document.body.classList.add('light-mode');
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-                themeIconMobile.classList.remove('fa-moon');
-                themeIconMobile.classList.add('fa-sun');
-            } else {
+            if (savedTheme === 'dark') {
                 document.body.classList.remove('light-mode');
                 themeIcon.classList.remove('fa-sun');
                 themeIcon.classList.add('fa-moon');
                 themeIconMobile.classList.remove('fa-sun');
                 themeIconMobile.classList.add('fa-moon');
+            } else {
+                document.body.classList.add('light-mode');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                themeIconMobile.classList.remove('fa-moon');
+                themeIconMobile.classList.add('fa-sun');
             }
 
             function toggleTheme() {
