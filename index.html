@@ -112,6 +112,11 @@
             color: #101010;
         }
 
+        /* Optimization for smooth transitions on skill icons */
+        .skill-icon-transition {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            will-change: transform;
+        }
     </style>
 </head>
 <body class="bg-primary-black text-text-light">
@@ -239,15 +244,15 @@
                         <div>
                             <h4 class="text-xl font-bold text-accent-green text-center mb-4">Programming Languages</h4>
                             <div class="grid grid-cols-2 gap-4 text-center">
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-php-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">PHP</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-javascript-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">JavaScript</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-python-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">Python</p>
                                 </div>
@@ -256,27 +261,27 @@
                         <div>
                             <h4 class="text-xl font-bold text-accent-blue text-center mb-4">Frameworks & Libraries</h4>
                             <div class="grid grid-cols-2 gap-4 text-center">
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-html5-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">HTML5</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-css3-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">CSS3</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-bootstrap-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">Bootstrap</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-livewire-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">Livewire</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-laravel-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">Laravel</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-django-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">Django</p>
                                 </div>
@@ -285,47 +290,47 @@
                         <div class="col-span-1 md:col-span-2 lg:col-span-1">
                             <h4 class="text-xl font-bold text-accent-green text-center mb-4">Databases & DevOps</h4>
                             <div class="grid grid-cols-2 gap-4 text-center">
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-postgresql-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">PostgreSQL</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-redis-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">Redis</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-mysql-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">MySQL</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-git-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">Git</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-github-original colored text-3xl mb-2"></i>
                                     <p class="font-semibold">GitHub</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-gitlab-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">GitLab</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-nginx-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">Nginx</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-apache-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">Apache</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-digitalocean-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">DigitalOcean</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-heroku-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">Heroku</p>
                                 </div>
-                                <div class="p-4 rounded-xl shadow-md transform hover:scale-105 transition-transform flex flex-col items-center">
+                                <div class="skill-icon-transition p-4 rounded-xl shadow-md transform hover:scale-105 hover:shadow-xl flex flex-col items-center relative z-0 hover:z-10">
                                     <i class="devicon-googlecloud-plain colored text-3xl mb-2"></i>
                                     <p class="font-semibold">Google Cloud</p>
                                 </div>
