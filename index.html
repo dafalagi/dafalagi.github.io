@@ -147,7 +147,7 @@
             </div>
         </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-secondary-black shadow-lg py-2">
+        <div id="mobile-menu" class="hidden md:hidden bg-secondary-black shadow-lg py-2 absolute top-full left-0 w-full z-40">
             <a href="#about" class="block px-4 py-2 hover:bg-hover-light transition-colors">About</a>
             <a href="#resume" class="block px-4 py-2 hover:bg-hover-light transition-colors">Resume</a>
             <a href="#projects" class="block px-4 py-2 hover:bg-hover-light transition-colors">Projects</a>
@@ -398,7 +398,7 @@
 
     <footer class="bg-secondary-black text-accent-gray py-6 text-center">
         <div class="container mx-auto">
-            <p>&copy; 2025 Dafa Rizky. All Rights Reserved.</p>
+            <p>&copy; <span id="current-year"></span> Dafa Rizky. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -453,6 +453,11 @@
             const mainHeader = document.getElementById('main-header');
 
             window.addEventListener('scroll', () => {
+                // Return early if the mobile menu is open, preventing the navbar from hiding
+                if (!mobileMenu.classList.contains('hidden')) {
+                    return;
+                }
+
                 const currentScrollY = window.scrollY;
                 if (currentScrollY > lastScrollY && currentScrollY > 100) {
                     // Scrolling down
@@ -507,6 +512,9 @@
             
             themeToggle.addEventListener('click', toggleTheme);
             themeToggleMobile.addEventListener('click', toggleTheme);
+
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
         });
     </script>
 
