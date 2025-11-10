@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
             ' for standardized bubble sheet exams using Optical Mark Recognition (OMR). The system replaces manual correction with a fast, accurate, ' +
             ' and scalable computer vision solution integrated into a full-featured web platform.',
             contributions: [
-                'Designed and implemented the database schema using PostgreSQL.',
-                'Developed RESTful endpoints for user registration, login, and profile management.',
-                'Created the product management API, including CRUD operations and search functionality.',
-                'Integrated a secure payment gateway and order processing system.'
+                'Developed the OMR algorithm using Python and OpenCV to accurately detect and interpret marked answers on bubble sheets.',
+                'Built the backend using Django to handle user authentication and result processing.',
+                'Designed a responsive frontend with Bootstrap to provide an intuitive user interface for teachers.',
+                'Integrated Google Auth for secure user login.',
             ],
             techStack: ['Python', 'JavaScript', 'HTML', 'CSS', 'Django', 'Bootstrap', 'MySQL', 'Google Cloud'],
             liveLink: 'https://github.com/dafalagi/Nilaiku'
