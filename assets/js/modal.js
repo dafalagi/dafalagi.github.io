@@ -57,7 +57,21 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             techStack: ['PHP', 'Laravel', 'PostgreSQL'],
             liveLink: null
-        }
+        },
+        'project5': {
+            title: 'Hotel Booking Engine (2025)',
+            description: 'A fully integrated and robust Online Booking Engine (OBE). The system is engineered to maximize hotel revenue through efficient direct booking capabilities ' +
+            ' while streamlining core operations such as guest check-in and financial reporting.',
+            contributions: [
+                'Implemented management features including reservation management, guest check-in, and reporting tools.',
+                'Integrated third-party services such as payment gateways, notification systems, and mailing services.',
+                'Collaborated with marketing team to optimize promotional campaigns.',
+                'Ensured data security and compliance with industry standards for online transactions.',
+                'Integrated real-time availability and pricing updates.',
+            ],
+            techStack: ['PHP', 'Laravel', 'PostgreSQL'],
+            liveLink: 'https://booking.grandiahotel.com/'
+        },
     };
 
     const modal = document.getElementById('project-modal');
