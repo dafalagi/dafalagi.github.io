@@ -2,16 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Modal Logic ---
     const projectData = {
         'project1': {
-            title: 'E-commerce API',
-            description: 'This project involved developing a scalable and secure RESTful API for a new e-commerce platform, handling product, user, and order management.',
+            title: 'Nilaiku',
+            description: 'Nilaiku is a sophisticated web application developed as a final academic project, focusing on automating the grading process ' +
+            ' for standardized bubble sheet exams using Optical Mark Recognition (OMR). The system replaces manual correction with a fast, accurate, ' +
+            ' and scalable computer vision solution integrated into a full-featured web platform.',
             contributions: [
                 'Designed and implemented the database schema using PostgreSQL.',
                 'Developed RESTful endpoints for user registration, login, and profile management.',
                 'Created the product management API, including CRUD operations and search functionality.',
                 'Integrated a secure payment gateway and order processing system.'
             ],
-            techStack: ['Laravel', 'PHP', 'PostgreSQL', 'Redis'],
-            liveLink: 'https://ecommerce-client-example.com'
+            techStack: ['Python', 'JavaScript', 'HTML', 'CSS', 'Django', 'Bootstrap', 'MySQL', 'Google Cloud'],
+            liveLink: 'https://github.com/dafalagi/Nilaiku'
         },
         'project2': {
             title: 'Travel Booking Engine and Management (2024)',
@@ -24,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Designed and implemented the database schema.',
                 'Integrated third-party APIs including payment gateway, WhatsApp notification, and email services.'
             ],
-            techStack: ['Laravel', 'Livewire', 'PostgreSQL', 'Redis'],
+            techStack: ['PHP', 'JavaScript', 'HTML', 'CSS', 'Laravel', 'Livewire', 'Bootstrap', 'PostgreSQL', 'Redis'],
             liveLink: null
         },
         'project3': {
@@ -79,10 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Clear and populate tech stack
                 modalTechStack.innerHTML = '';
                 project.techStack.forEach(tech => {
-                    const li = document.createElement('li');
-                    li.className = 'badge-style rounded-full px-3 py-1 text-sm font-semibold';
-                    li.textContent = tech;
-                    modalTechStack.appendChild(li);
+                    const span = document.createElement('span');
+                    const techClass = `badge-${tech.toLowerCase().replace(/\s+/g, '').replace(/\./g, '')}`;
+                    span.className = `badge-style ${techClass}`;
+                    span.textContent = tech;
+                    modalTechStack.appendChild(span);
                 });
 
                 // Set live link

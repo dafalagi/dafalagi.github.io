@@ -113,13 +113,84 @@ body {
 }
 
 .badge-style {
-    background-color: rgba(255,255,255,0.06);
+    background-color: var(--bg-secondary);
     color: var(--text-color);
-    padding: 0.25rem 0.75rem;
+    border: 1.5px solid var(--accent-blue);
+    padding: 0.275rem 0.675rem;
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
     display: inline-block;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.15s ease;
 }
+
+.badge-style:hover {
+    background-color: rgba(59, 130, 246, 0.05);
+    transform: translateY(-1px);
+}
+
+/* Tech-specific outline colors matching their brand colors */
+.badge-php { border-color: #777BB4; }
+.badge-php:hover { background-color: rgba(119, 123, 180, 0.05); }
+
+.badge-javascript { border-color: #F7DF1E; }
+.badge-javascript:hover { background-color: rgba(247, 223, 30, 0.05); }
+
+.badge-python { border-color: #3776AB; }
+.badge-python:hover { background-color: rgba(55, 118, 171, 0.05); }
+
+.badge-html { border-color: #E34F26; }
+.badge-html:hover { background-color: rgba(227, 79, 38, 0.05); }
+
+.badge-css { border-color: #1572B6; }
+.badge-css:hover { background-color: rgba(21, 114, 182, 0.05); }
+
+.badge-laravel { border-color: #FF2D20; }
+.badge-laravel:hover { background-color: rgba(255, 45, 32, 0.05); }
+
+.badge-livewire { border-color: #FB70A9; }
+.badge-livewire:hover { background-color: rgba(251, 112, 169, 0.05); }
+
+.badge-django { border-color: #092E20; }
+.badge-django:hover { background-color: rgba(9, 46, 32, 0.05); }
+
+.badge-bootstrap { border-color: #7952B3; }
+.badge-bootstrap:hover { background-color: rgba(121, 82, 179, 0.05); }
+
+.badge-postgresql { border-color: #336791; }
+.badge-postgresql:hover { background-color: rgba(51, 103, 145, 0.05); }
+
+.badge-mysql { border-color: #4479A1; }
+.badge-mysql:hover { background-color: rgba(68, 121, 161, 0.05); }
+
+.badge-redis { border-color: #DC382D; }
+.badge-redis:hover { background-color: rgba(220, 56, 45, 0.05); }
+
+.badge-git { border-color: #F05032; }
+.badge-git:hover { background-color: rgba(240, 80, 50, 0.05); }
+
+.badge-github { border-color: #181717; }
+.badge-github:hover { background-color: rgba(24, 23, 23, 0.05); }
+
+.badge-gitlab { border-color: #FCA326; }
+.badge-gitlab:hover { background-color: rgba(252, 163, 38, 0.05); }
+
+.badge-nginx { border-color: #009639; }
+.badge-nginx:hover { background-color: rgba(0, 150, 57, 0.05); }
+
+.badge-apache { border-color: #D22128; }
+.badge-apache:hover { background-color: rgba(210, 33, 40, 0.05); }
+
+.badge-digitalocean { border-color: #0080FF; }
+.badge-digitalocean:hover { background-color: rgba(0, 128, 255, 0.05); }
+
+.badge-heroku { border-color: #430098; }
+.badge-heroku:hover { background-color: rgba(67, 0, 152, 0.05); }
+
+.badge-googlecloud { border-color: #4285F4; }
+.badge-googlecloud:hover { background-color: rgba(66, 133, 244, 0.05); }
 
 .close-btn-custom {
     background: transparent;
