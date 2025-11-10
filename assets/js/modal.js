@@ -24,22 +24,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Designed and built an API for booking engine.',
                 'Implemented user authentication and role-based access control for different user types (customers, agents, admins).',
                 'Designed and implemented the database schema.',
-                'Integrated third-party APIs including payment gateway, WhatsApp notification, and email services.'
+                'Integrated third-party APIs including payment gateway, WhatsApp notification, and email services.',
             ],
             techStack: ['PHP', 'JavaScript', 'HTML', 'CSS', 'Laravel', 'Livewire', 'Bootstrap', 'PostgreSQL', 'Redis'],
             liveLink: null
         },
         'project3': {
-            title: 'School Management Backend',
-            description: 'A comprehensive backend system for a school management application, handling everything from student records and grading to class scheduling and attendance tracking.',
+            title: 'Villa Management System (2024)',
+            description: 'A custom, comprehensive Villa Management System (VMS) designed to streamline villa rental operations, including booking, resource management, marketing functionalities.' +
+            ' This is a full-stack web application that I joined halfway through development to enhance backend functionalities and ensure seamless integration with the frontend.',
             contributions: [
-                'Developed the core API for managing student and teacher data.',
-                'Created a secure and efficient system for submitting and viewing grades.',
-                'Implemented a scheduling algorithm to optimize class assignments and prevent conflicts.',
-                'Worked closely with the frontend team to ensure seamless data flow and integration.'
+                'Enhanced backend functionalities to improve booking management and villa availability tracking.',
+                'Collaborated with frontend developers to ensure seamless integration between backend services and user interface.',
+                'Optimized database queries to improve application performance and responsiveness.',
+                'Fixed bugs and implemented new features based on employee feedback.',
+                'Implemented date import feature to streamline villa availability updates from third-party booking systems.',
             ],
-            techStack: ['Laravel', 'PHP', 'PostgreSQL'],
-            liveLink: 'https://school-client-example.com'
+            techStack: ['PHP', 'JavaScript', 'HTML', 'CSS', 'Laravel', 'Bootstrap', 'MySQL'],
+            liveLink: 'https://totalbali.com/'
         }
     };
 
