@@ -42,6 +42,21 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             techStack: ['PHP', 'JavaScript', 'HTML', 'CSS', 'Laravel', 'Bootstrap', 'MySQL'],
             liveLink: 'https://totalbali.com/'
+        },
+        'project4': {
+            title: 'Pillar (2024)',
+            description: 'Pillar is a centralized, modular "Super App" developed to converge three essential business functions: Human Resources (HR), Cost Control (Finance), ' +
+            ' and Helpdesk (Maintenance/IT support). The platform eliminates data silos, enforces unified operational governance, and provides a single pane of glass for employee services ' +
+            ' and organizational resource control.',
+            contributions: [
+                'Built Helpdesk system for efficient issue tracking and resolution.',
+                'Created Cost Control modules to monitor and manage expenses.',
+                'Developed and integrated Human Resource management features.',
+                'Optimized application performance and user experience.',
+                'Implemented role-based access control to ensure data security and proper authorization across different modules.',
+            ],
+            techStack: ['PHP', 'Laravel', 'PostgreSQL'],
+            liveLink: null
         }
     };
 
