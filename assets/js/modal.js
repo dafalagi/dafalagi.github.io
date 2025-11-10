@@ -14,15 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
             liveLink: 'https://ecommerce-client-example.com'
         },
         'project2': {
-            title: 'Internal CRM System',
-            description: 'An internal application built to help a small technology company manage their client relationships and track project lifecycles from start to finish.',
+            title: 'Travel Booking Engine and Management (2024)',
+            description: 'A custom-built travel booking and full-stack management system designed to streamline the reservation process for flights, accommodations, and related services, ' + 
+            ' while providing robust administrative tools for operational efficiency. The project focuses on scalability and maintainability, leveraging modern PHP and relational database architecture.',
             contributions: [
                 'Engineered the backend logic for client and project tracking.',
                 'Implemented a user authentication system with different access levels (admin, manager, team member).',
                 'Designed and built an API for generating custom reports on project progress and team performance.'
             ],
-            techStack: ['Django', 'Python', 'PostgreSQL'],
-            liveLink: 'https://crm-client-example.com'
+            techStack: ['Laravel', 'Livewire', 'PostgreSQL', 'Redis'],
+            liveLink: null
         },
         'project3': {
             title: 'School Management Backend',
@@ -49,6 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Variable to hold the link temporarily
     let currentLiveLink = null;
+
+    // Hide the live link button initially when there's no link
+    if (modalLiveLinkBtn && !currentLiveLink) {
+        modalLiveLinkBtn.classList.add('hidden');
+    }
 
     viewProjectButtons.forEach(button => {
         button.addEventListener('click', (e) => {
@@ -99,12 +105,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // New event listener for the button to open the link
-    modalLiveLinkBtn.addEventListener('click', () => {
-        if (currentLiveLink) {
-            window.open(currentLiveLink, '_blank');
-        }
-    });
+    // New event listener for the button to open the link (only attach if the button exists)
+    if (modalLiveLinkBtn) {
+        modalLiveLinkBtn.addEventListener('click', () => {
+            if (currentLiveLink) {
+                window.open(currentLiveLink, '_blank');
+            }
+        });
+    }
 
     // Close modal functionality
     const closeModal = () => {
