@@ -88,3 +88,64 @@ body {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     will-change: transform;
 }
+
+/* Modal improvements */
+#project-modal {
+    background-color: rgba(0,0,0,0.55); /* slightly darker overlay */
+    backdrop-filter: blur(4px);
+}
+
+.modal-card {
+    position: relative;
+    padding: 1.25rem; /* keep tailwind p-8 fallback */
+    border-radius: 1rem; /* keep rounded-2xl look */
+    box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+    overflow: hidden;
+}
+
+.modal-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal-card p {
+    color: var(--accent-gray);
+}
+
+.badge-style {
+    background-color: rgba(255,255,255,0.06);
+    color: var(--text-color);
+    padding: 0.25rem 0.75rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.close-btn-custom {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+}
+.close-btn-custom:hover {
+    background-color: rgba(255,255,255,0.04);
+    transform: rotate(90deg);
+}
+
+/* entrance tweak to make scale a bit smoother */
+.modal-card.scale-100 {
+    transform: scale(1);
+}
+.modal-card.scale-95 {
+    transform: scale(.98);
+}
+
+@media (max-width: 640px) {
+    .modal-card { padding: 1rem; border-radius: 0.75rem; }
+}

@@ -16,11 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'project2': {
             title: 'Travel Booking Engine and Management (2024)',
             description: 'A custom-built travel booking and full-stack management system designed to streamline the reservation process for flights, accommodations, and related services, ' + 
-            ' while providing robust administrative tools for operational efficiency. The project focuses on scalability and maintainability, leveraging modern PHP and relational database architecture.',
+            ' while providing robust administrative tools for operational efficiency.',
             contributions: [
-                'Engineered the backend logic for client and project tracking.',
-                'Implemented a user authentication system with different access levels (admin, manager, team member).',
-                'Designed and built an API for generating custom reports on project progress and team performance.'
+                'Engineered the management functionalities which incorporated front-end and back-end logic.',
+                'Designed and built an API for booking engine.',
+                'Implemented user authentication and role-based access control for different user types (customers, agents, admins).',
+                'Designed and implemented the database schema.',
+                'Integrated third-party APIs including payment gateway, WhatsApp notification, and email services.'
             ],
             techStack: ['Laravel', 'Livewire', 'PostgreSQL', 'Redis'],
             liveLink: null
