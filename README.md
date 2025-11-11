@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing full-stack development projects and professional experience. Built with a focus on performance, accessibility, and maintainability.
 
-![Portfolio Preview](assets/img/favicon.webp)
+<!-- ![Portfolio Preview](assets/img/favicon.webp) -->
 
 ## 🌟 Features
 
