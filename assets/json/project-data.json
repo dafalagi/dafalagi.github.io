@@ -109,5 +109,21 @@
         ],
         "techStack": ["PHP", "Laravel", "PostgreSQL"],
         "liveLink": null
+    },
+    "project8": {
+        "title": "Hotel Room Service (2025)",
+        "excerpt": "A room service system designed to enhance guest experience and streamline hotel operations.",
+        "image": "assets/banner/room-service-2025.webp",
+        "buttonColor": "blue",
+        "description": "A tri-platform hospitality solution engineered to digitize and optimize the end-to-end hotel room service experience. It eliminates phone-based ordering and manual ticketing by providing a seamless interface for guests (Web App) and a dedicated fulfillment tool for hotel staff (Mobile App), all managed by a central administration hub.",
+        "contributions": [
+            "Implemented backend functionalities to manage orders, track service statuses, and coordinate staff assignments.",
+            "Integrated payment processing and WhatsApp notification systems for seamless transactions and communication.",
+            "Collaborated with mobile and front-end developers to deliver a cohesive and intuitive design.",
+            "Implemented QR code ordering feature to streamline guest interactions.",
+            "Ensured API security even with public access from guest devices using QR based authentication."
+        ],
+        "techStack": ["PHP", "Laravel", "PostgreSQL"],
+        "liveLink": null
     }
 }
