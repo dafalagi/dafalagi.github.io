@@ -93,5 +93,21 @@
         ],
         "techStack": ["PHP", "Laravel", "PostgreSQL"],
         "liveLink": null
+    },
+    "project7": {
+        "title": "CRM (2025)",
+        "excerpt": "Customer Relationship Management (CRM) system designed to help businesses manage interactions with current and potential customers.",
+        "image": "assets/banner/crm-project-2025.webp",
+        "buttonColor": "green",
+        "description": "A specialized, multi-service CRM and operational hub designed for corporations offering external services such as engineering, housekeeping, and security to clients. The system centralizes client management, automates the service ticketing lifecycle, and provides real-time visibility into field staff deployment and service resolution.",
+        "contributions": [
+            "Developed service ticketing system to manage client requests and track resolution progress.",
+            "Implemented client management features to maintain comprehensive records of interactions and service history.",
+            "Created real-time dashboards for monitoring field staff activities and service status.",
+            "Optimized backend processes to ensure efficient data handling and reporting.",
+            "Collaborated with mobile and front-end developers to deliver a seamless user experience."
+        ],
+        "techStack": ["PHP", "Laravel", "PostgreSQL"],
+        "liveLink": null
     }
 }
