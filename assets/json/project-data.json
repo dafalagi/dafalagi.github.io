@@ -1,6 +1,9 @@
 {
     "project1": {
-        "title": "Nilaiku",
+        "title": "Nilaiku (2023)",
+        "excerpt": "An OMR based exam grader app. Built for educational institutions to automate and streamline the grading process.",
+        "image": "assets/banner/exam-scanner-2023.webp",
+        "buttonColor": "green",
         "description": "Nilaiku is a sophisticated web application developed as a final academic project, focusing on automating the grading process for standardized bubble sheet exams using Optical Mark Recognition (OMR). The system replaces manual correction with a fast, accurate, and scalable computer vision solution integrated into a full-featured web platform.",
         "contributions": [
             "Developed the OMR algorithm using Python and OpenCV to accurately detect and interpret marked answers on bubble sheets.",
@@ -13,6 +16,9 @@
     },
     "project2": {
         "title": "Travel Booking Engine and Management (2024)",
+        "excerpt": "Booking engine and internal management apps for a travel agency.",
+        "image": "assets/banner/travel-project-2024.webp",
+        "buttonColor": "blue",
         "description": "A custom-built travel booking and full-stack management system designed to streamline the reservation process for flights, accommodations, and related services, while providing robust administrative tools for operational efficiency.",
         "contributions": [
             "Engineered the management functionalities which incorporated front-end and back-end logic.",
@@ -26,6 +32,9 @@
     },
     "project3": {
         "title": "Villa Management System (2024)",
+        "excerpt": "A comprehensive system for managing villa rentals, including booking, resource management, and marketing functionalities.",
+        "image": "assets/banner/villa-project-2024.webp",
+        "buttonColor": "green",
         "description": "A custom, comprehensive Villa Management System (VMS) designed to streamline villa rental operations, including booking, resource management, marketing functionalities. This is a full-stack web application that I joined halfway through development to enhance backend functionalities and ensure seamless integration with the frontend.",
         "contributions": [
             "Enhanced backend functionalities to improve booking management and villa availability tracking.",
@@ -39,6 +48,9 @@
     },
     "project4": {
         "title": "ERP (2025)",
+        "excerpt": "\"Super App\" consisted of three management systems which include Human Resource, Cost Control, and Helpdesk.",
+        "image": "assets/banner/pillar-project-2025.webp",
+        "buttonColor": "green",
         "description": "Enterprise Resource Planning (ERP) is a centralized, modular \"Super App\" developed to converge three essential business functions: Human Resources (HR), Cost Control (Finance), and Helpdesk (Maintenance/IT support). The platform eliminates data silos, enforces unified operational governance, and provides a single pane of glass for employee services and organizational resource control.",
         "contributions": [
             "Built Helpdesk system for efficient issue tracking and resolution.",
@@ -52,6 +64,9 @@
     },
     "project5": {
         "title": "Hotel Booking Engine (2025)",
+        "excerpt": "Online booking engine system designed to streamline reservations and operations for hospitality businesses.",
+        "image": "assets/banner/hotel-booking-2025.webp",
+        "buttonColor": "blue",
         "description": "A fully integrated and robust Online Booking Engine (OBE). The system is engineered to maximize hotel revenue through efficient direct booking capabilities while streamlining core operations such as guest check-in and financial reporting.",
         "contributions": [
             "Implemented management features including reservation management, guest check-in, and reporting tools.",
@@ -65,6 +80,9 @@
     },
     "project6": {
         "title": "Field Sales Nexus (2025)",
+        "excerpt": "Dual-interface application primarily focused on helping field sales teams manage their activities and store interactions efficiently.",
+        "image": "assets/banner/salesperson-project-2025.webp",
+        "buttonColor": "green",
         "description": "A comprehensive, dual-interface application designed to optimize field sales operations, streamline order placement, and centralize store management. It empowers sales representatives with a dedicated mobile application for on-site activities while providing administrators with a powerful web-based platform for holistic oversight and control.",
         "contributions": [
             "Implemented features for order placement, customer management, and activity tracking.",
