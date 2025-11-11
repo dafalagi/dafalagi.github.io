@@ -155,9 +155,12 @@ Supported technologies with authentic brand colors:
 
 ### Performance Optimizations
 - **Lazy Loading**: Images load as needed to improve initial page load
+- **Resource Hints**: Preconnect and DNS prefetch for faster external resource loading
+- **Deferred Loading**: Non-critical CSS and JS loaded asynchronously
+- **Critical CSS**: Inlined above-the-fold styles for faster rendering
+- **Image Optimization**: WebP format with explicit width/height to prevent layout shift
 - **Minimal Dependencies**: Only essential external resources
 - **Efficient Animations**: CSS transforms and GPU acceleration
-- **Optimized Assets**: Compressed images (WebP format)
 - **Clean JavaScript**: Vanilla JS without heavy frameworks
 
 ## 🌐 Browser Support

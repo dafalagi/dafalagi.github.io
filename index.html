@@ -10,9 +10,23 @@
     <link rel="icon" href="assets/img/favicon.webp" type="image/webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2kS1vL7jPj6g8f6W5B/3H8W4h5Vv3iU5e2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"></noscript>
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+        /* Critical styles for faster initial render */
+        body { background-color: #0d1117; color: #f0f6fc; }
+        .bg-secondary-black { background-color: #161b22; }
+        .text-text-light { color: #f0f6fc; }
+        .transition-all { transition: all 0.3s ease-in-out; }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/tailwind-config.js"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -79,7 +93,7 @@
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
                 <div class="flex flex-col md:flex-row items-center bg-secondary-black p-8 rounded-2xl shadow-lg">
-                    <img src="assets/img/profile.webp" alt="Profile Picture" loading="lazy" class="w-40 h-40 rounded-full mb-6 md:mb-0 md:mr-8 shadow-md object-cover object-center">
+                    <img src="assets/img/profile.webp" alt="Profile Picture" loading="lazy" width="160" height="160" class="w-40 h-40 rounded-full mb-6 md:mb-0 md:mr-8 shadow-md object-cover object-center">
                     <div class="text-center md:text-left">
                         <p class="text-lg leading-relaxed mb-4">
                             As a software engineer based in Bandung, Indonesia, I am passionate about building robust and efficient applications. 
@@ -306,9 +320,9 @@
         </div>
     </div>
 
-    <script src="assets/js/projects.js"></script>
-    <script src="assets/js/modal.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    <script defer src="assets/js/projects.js"></script>
+    <script defer src="assets/js/modal.js"></script>
+    <script defer src="assets/js/scripts.js"></script>
 
 </body>
 </html>
