@@ -72,6 +72,21 @@ document.addEventListener('DOMContentLoaded', () => {
             techStack: ['PHP', 'Laravel', 'PostgreSQL'],
             liveLink: 'https://booking.grandiahotel.com/'
         },
+        'project6': {
+            title: 'Field Sales Nexus (2025)',
+            description: 'A comprehensive, dual-interface application designed to optimize field sales operations, streamline order placement, and centralize store management. ' +
+            ' It empowers sales representatives with a dedicated mobile application for on-site activities while providing administrators with a powerful ' +
+            ' web-based platform for holistic oversight and control.',
+            contributions: [
+                'Implemented features for order placement, customer management, and activity tracking.',
+                'Optimized API architecture for performance and scalability.',
+                'Collaborated with mobile and front-end developers to ensure smooth integration and functionality across platforms.',
+                'Enhanced user experience through cache management.',
+                'Developed reporting tools to provide insights into sales performance and customer behavior.',
+            ],
+            techStack: ['PHP', 'Laravel', 'PostgreSQL'],
+            liveLink: null
+        }
     };
 
     const modal = document.getElementById('project-modal');
