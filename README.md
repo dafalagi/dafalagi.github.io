@@ -154,6 +154,7 @@ Supported technologies with authentic brand colors:
 - **Smooth Transitions**: Animated theme changes
 
 ### Performance Optimizations
+- **Lazy Loading**: Images load as needed to improve initial page load
 - **Minimal Dependencies**: Only essential external resources
 - **Efficient Animations**: CSS transforms and GPU acceleration
 - **Optimized Assets**: Compressed images (WebP format)

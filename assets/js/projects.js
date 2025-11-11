@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const buttonHoverClass = project.buttonColor === 'blue' ? 'hover:bg-accent-blue/80' : 'hover:bg-accent-green/80';
         
         card.innerHTML = `
-            <img src="${project.image}" alt="${project.title}" class="rounded-lg mb-6 w-full h-48 object-cover object-center">
+            <img src="${project.image}" alt="${project.title}" loading="lazy" class="rounded-lg mb-6 w-full h-48 object-cover object-center">
             <h3 class="text-2xl font-bold mb-2">${project.title}</h3>
             <p class="text-accent-gray mb-4">${project.excerpt}</p>
             <button class="view-project-btn inline-block ${buttonColorClass} text-primary-black font-bold py-2 px-4 rounded-full text-center ${buttonHoverClass} transition-colors mt-auto self-start" data-project-id="${projectId}">View Project</button>
