@@ -154,14 +154,11 @@ Supported technologies with authentic brand colors:
 - **Smooth Transitions**: Animated theme changes
 
 ### Performance Optimizations
-- **Critical CSS**: Extensive inlined styles for mobile-first above-the-fold rendering
-- **Deferred Framework Loading**: Tailwind CSS loads asynchronously after DOM ready
-- **Font Optimization**: Direct WOFF2 preloading with fallback CSS loading
 - **Lazy Loading**: Images load as needed to improve initial page load
 - **Resource Hints**: Preconnect and DNS prefetch for faster external resource loading
-- **Non-Blocking Scripts**: All JavaScript deferred to prevent render blocking
+- **Deferred Loading**: Non-critical CSS and JS loaded asynchronously
+- **Critical CSS**: Inlined above-the-fold styles for faster rendering
 - **Image Optimization**: WebP format with explicit width/height to prevent layout shift
-- **Mobile-First**: Critical rendering path optimized for mobile performance
 - **Minimal Dependencies**: Only essential external resources
 - **Efficient Animations**: CSS transforms and GPU acceleration
 - **Clean JavaScript**: Vanilla JS without heavy frameworks
