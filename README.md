@@ -79,7 +79,7 @@ dafalagi.github.io/
 
 ### Typography
 - **Font Family**: Inter (400, 600, 700)
-- **Responsive Scaling**: Fluid typography with clamp() functions
+<!-- - **Responsive Scaling**: Fluid typography with clamp() functions -->
 - **Hierarchy**: Clear type scale from body text to headings
 
 ## 🚀 Getting Started
