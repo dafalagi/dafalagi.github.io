@@ -125,5 +125,21 @@
         ],
         "techStack": ["PHP", "Laravel", "PostgreSQL"],
         "liveLink": null
+    },
+    "project9": {
+        "title": "Laravel SOA Starter (2025)",
+        "excerpt": "A starter template for building Laravel applications using Service-Oriented Architecture (SOA) principles.",
+        "image": "assets/banner/soa-starter-2025.webp",
+        "buttonColor": "green",
+        "description": "A boilerplate template designed to kickstart Laravel projects using Service-Oriented Architecture (SOA) principles. This starter kit provides a structured foundation for building scalable and maintainable applications by promoting modularity and separation of concerns.",
+        "contributions": [
+            "Designed the project structure to facilitate SOA principles.",
+            "Implemented a rigorous Service Layer pattern, ensuring that all complex business logic resides outside controllers.",
+            "Enforced modular monolith architecture to enhance code organization and division of responsibilities.",
+            "Provided documentation to guide developers in utilizing the starter template effectively.",
+            "Optimized for scalability and maintainability."
+        ],
+        "techStack": ["PHP", "Laravel", "PostgreSQL"],
+        "liveLink": "https://github.com/dafalagi/laravel-soa-starter"
     }
 }
