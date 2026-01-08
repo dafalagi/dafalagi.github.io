@@ -159,6 +159,9 @@ body {
 .badge-bootstrap { border-color: #7952B3; }
 .badge-bootstrap:hover { background-color: rgba(121, 82, 179, 0.05); }
 
+.badge-tailwindcss { border-color: #38BDF8; }
+.badge-tailwindcss:hover { background-color: rgba(56, 189, 248, 0.05); }
+
 .badge-postgresql { border-color: #336791; }
 .badge-postgresql:hover { background-color: rgba(51, 103, 145, 0.05); }
 
