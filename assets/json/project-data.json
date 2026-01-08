@@ -141,5 +141,21 @@
         ],
         "techStack": ["PHP", "Laravel", "PostgreSQL"],
         "liveLink": "https://github.com/dafalagi/laravel-soa-starter"
+    },
+    "project10": {
+        "title": "E-Commerce Platform (2025)",
+        "excerpt": "A full-featured e-commerce platform designed to facilitate online shopping experiences.",
+        "image": "assets/banner/ecommerce-2025.webp",
+        "buttonColor": "green",
+        "description": "A comprehensive e-commerce platform engineered to provide a seamless online shopping experience. The system encompasses a wide range of features, including product browsing, shopping cart management, and order tracking, all designed to enhance user engagement and drive sales.",
+        "contributions": [
+            "Developed product catalog and browsing functionalities.",
+            "Implemented shopping cart and checkout processes.",
+            "Integrated real-time notifications for product updates.",
+            "Optimized user experience through responsive design and intuitive navigation.",
+            "Implemented order tracking features."
+        ],
+        "techStack": ["PHP", "Laravel", "PostgreSQL", "Livewire", "Tailwind CSS", "Redis"],
+        "liveLink": "https://github.com/dafalagi/e-commerce-trial"
     }
 }
