@@ -28,7 +28,7 @@
             "Integrated third-party APIs including payment gateway, WhatsApp notification, and email services."
         ],
         "techStack": ["PHP", "JavaScript", "HTML", "CSS", "Laravel", "Livewire", "Bootstrap", "PostgreSQL", "Redis"],
-        "liveLink": null
+        "liveLink": "https://smartmkm.my/"
     },
     "project3": {
         "title": "Villa Management System (2024)",
